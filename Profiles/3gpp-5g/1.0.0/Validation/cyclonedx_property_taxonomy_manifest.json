@@ -1,0 +1,481 @@
+{
+  "manifestPurpose": "Registration-ready coordination inventory for the CycloneDX Property Taxonomy; not an official upstream submission format and not evidence of registration/acceptance.",
+  "profileVersion": "1.0.0",
+  "namespace": "atis:telecom5g",
+  "namespacePurpose": "ATIS/QSCII telecom-specific properties for 3GPP 5G cryptographic inventory/profile semantics layered on CycloneDX.",
+  "registrationStatus": "coordination-prepared; upstream registration optional and external to CBOM conformance",
+  "cycloneDxGuidance": "CycloneDX encourages registration of property names of interest to the general public; formal registration is optional.",
+  "propertyTaxonomyRepository": "https://github.com/CycloneDX/cyclonedx-property-taxonomy",
+  "properties": [
+    {
+      "name": "atis:telecom5g:profile",
+      "description": "Identifies the ATIS 5G CBOM profile and version claimed by this BOM.",
+      "appliesTo": [
+        "metadata"
+      ],
+      "deprecated": false
+    },
+    {
+      "name": "atis:telecom5g:taxonomyVersion",
+      "description": "Identifies the ATIS telecom5g property taxonomy version used by this BOM. This version is independent of the profile version and the CycloneDX implementation-binding version.",
+      "appliesTo": [
+        "metadata"
+      ],
+      "deprecated": false
+    },
+    {
+      "name": "atis:telecom5g:cbom.scope",
+      "description": "Declares whether the CBOM represents vendor capability or deployment-specific posture. Strict v1.0.0 conformance requires exactly one scope.",
+      "appliesTo": [
+        "metadata"
+      ],
+      "deprecated": false
+    },
+    {
+      "name": "atis:telecom5g:baselineRelease",
+      "description": "BOM-level default 3GPP architecture/specification release for represented entities and bindings unless an object supplies 3gppSpecRelease.",
+      "appliesTo": [
+        "metadata"
+      ],
+      "deprecated": false
+    },
+    {
+      "name": "atis:telecom5g:inventoryBaseline",
+      "description": "Specific cryptographic inventory baseline used by the profile or producer.",
+      "appliesTo": [
+        "metadata"
+      ],
+      "deprecated": false
+    },
+    {
+      "name": "atis:telecom5g:inventoryCompleteness",
+      "description": "Producer assertion about completeness of the in-scope telecom cryptographic inventory declarations represented by this CBOM. Meaning is scope-relative; complete does not imply that absent capabilities or deployment states are unsupported/not used.",
+      "appliesTo": [
+        "metadata"
+      ],
+      "deprecated": false
+    },
+    {
+      "name": "atis:telecom5g:inventoryScopeRef",
+      "description": "References a represented entity or reified binding bom-ref that forms an explicit root of the inventory scope. At least one scope root is required when inventoryCompleteness=complete.",
+      "appliesTo": [
+        "metadata"
+      ],
+      "deprecated": false
+    },
+    {
+      "name": "atis:telecom5g:scenario",
+      "description": "Architecture scenario target, e.g., TS23.501-roaming.",
+      "appliesTo": [
+        "metadata"
+      ],
+      "deprecated": false
+    },
+    {
+      "name": "atis:telecom5g:entityType",
+      "description": "3GPP 5GS entity or Network Function type represented by the CBOM. The name intentionally includes non-NF entities such as UE, gNB, and ng-eNB. Where applicable, cryptographic usage for that entity is aligned with TR 33.938.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "deprecated": false
+    },
+    {
+      "name": "atis:telecom5g:nfType",
+      "description": "Migration alias for atis:telecom5g:entityType. MUST NOT appear in a strict v1.0.0 CBOM.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "deprecated": true
+    },
+    {
+      "name": "atis:telecom5g:3gppSpecRelease",
+      "description": "Object-level 3GPP release for the entity or binding; when present it explicitly overrides metadata baselineRelease for that object.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "deprecated": false
+    },
+    {
+      "name": "atis:telecom5g:nf.name",
+      "description": "Canonical NF identifier when native service/component name is not canonical. NF-scoped only; subject MUST be classified as an NF.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "deprecated": false
+    },
+    {
+      "name": "atis:telecom5g:nf.type",
+      "description": "Optional NF category, e.g., SBA, Access, UserPlane, RoamingSecurity. NF-scoped only; subject MUST be classified as an NF.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "deprecated": false
+    },
+    {
+      "name": "atis:telecom5g:nf.role",
+      "description": "Optional NF architecture role hint, e.g., control-plane, user-plane, security-edge. NF-scoped only; subject MUST be classified as an NF.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "deprecated": false
+    },
+    {
+      "name": "atis:telecom5g:bindingType",
+      "description": "Semantic kind of the modeled 5G architectural binding/interface.",
+      "appliesTo": [
+        "service"
+      ],
+      "deprecated": false
+    },
+    {
+      "name": "atis:telecom5g:binding",
+      "description": "Canonical 3GPP architectural binding/interface label, e.g., N2, N32-f, Ua, NEF-AF, or Nausf_UEAuthentication. A protocol name such as GTP-C or 5G-AKA is not itself a binding identifier.",
+      "appliesTo": [
+        "service"
+      ],
+      "deprecated": false
+    },
+    {
+      "name": "atis:telecom5g:interfaces",
+      "description": "Migration-only compatibility summary listing 3GPP reference points supported/exposed by an NF or entity. MUST NOT appear in a strict v1.0.0 CBOM.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "deprecated": true
+    },
+    {
+      "name": "atis:telecom5g:interface",
+      "description": "Migration-only compatibility property for a single 3GPP reference point. MUST NOT appear in a strict v1.0.0 CBOM.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "deprecated": true
+    },
+    {
+      "name": "atis:telecom5g:assertion",
+      "description": "Migration-only compatibility qualifier for a crypto statement as supported or effective. MUST NOT appear in a strict v1.0.0 CBOM.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "deprecated": true
+    },
+    {
+      "name": "atis:telecom5g:crypto.supportedProtocols",
+      "description": "Vendor capability summary of canonical cryptographic protocols supported by the represented entity/product.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "deprecated": false
+    },
+    {
+      "name": "atis:telecom5g:crypto.supportedConstructs",
+      "description": "Vendor capability summary of canonical non-protocol security constructs supported by the represented entity/product.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "deprecated": false
+    },
+    {
+      "name": "atis:telecom5g:crypto.supportedCryptography",
+      "description": "Vendor capability summary using noncanonical display/index labels for cryptographic algorithms, suites, or primitives supported by the represented entity/product. Each value MUST correspond to a detailed cryptographic asset; native CycloneDX cryptoProperties are authoritative for normalized interpretation.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "deprecated": false
+    },
+    {
+      "name": "atis:telecom5g:securityObjective",
+      "description": "Security objective provided on the binding, kept distinct from operational context and cryptographic usage type.",
+      "appliesTo": [
+        "service"
+      ],
+      "deprecated": false
+    },
+    {
+      "name": "atis:telecom5g:protectionContext",
+      "description": "Multi-valued faceted operational-context classification. Values from different facets (plane, layer, interface/application context, operational context) MAY coexist and are not mutually exclusive. No unqualified other value is defined.",
+      "appliesTo": [
+        "service"
+      ],
+      "deprecated": false
+    },
+    {
+      "name": "atis:telecom5g:cryptoUsageType",
+      "description": "TR 33.938-aligned cryptographic feature or usage type for the represented cryptographic-asset instance. If the same algorithm has materially different usage semantics in different contexts, separate contextual asset instances with distinct bom-ref values SHOULD be used. Binding-level use is summary-only.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "deprecated": false
+    },
+    {
+      "name": "atis:telecom5g:protocol",
+      "description": "Canonical telecom-facing protocol label used by the binding.",
+      "appliesTo": [
+        "service"
+      ],
+      "deprecated": false
+    },
+    {
+      "name": "atis:telecom5g:securityConstruct",
+      "description": "Canonical telecom-facing non-protocol security construct identifier. Prefer a distinct referencable construct asset when graph identity is needed.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "deprecated": false
+    },
+    {
+      "name": "atis:telecom5g:securityConstructType",
+      "description": "Canonical semantic classification of a securityConstruct on a referencable construct component. It MUST match the v1.0.0 security-construct classification table. Binding/service summaries use securityConstruct without securityConstructType.",
+      "appliesTo": [
+        "component"
+      ],
+      "deprecated": false
+    },
+    {
+      "name": "atis:telecom5g:cryptography",
+      "description": "Noncanonical display/index label for a cryptographic algorithm, suite, or primitive used by the binding. It MUST correspond to a detailed reachable cryptographic asset; native CycloneDX cryptoProperties are authoritative for normalized interpretation.",
+      "appliesTo": [
+        "service"
+      ],
+      "deprecated": false
+    },
+    {
+      "name": "atis:telecom5g:effectiveProtocol",
+      "description": "Protocol known to be active, enforced, negotiated, or directly observed in the deployed binding. Mere configuration is not sufficient.",
+      "appliesTo": [
+        "service"
+      ],
+      "deprecated": false
+    },
+    {
+      "name": "atis:telecom5g:effectiveConstruct",
+      "description": "Non-protocol security construct known to be active, enforced, negotiated, or directly observed in the deployed binding. Mere configuration is not sufficient.",
+      "appliesTo": [
+        "service"
+      ],
+      "deprecated": false
+    },
+    {
+      "name": "atis:telecom5g:effectiveCryptography",
+      "description": "Noncanonical display/index label for an algorithm or suite known to be active, enforced, negotiated, or directly observed in the deployed binding. It MUST correspond to a detailed reachable asset; native CycloneDX cryptoProperties are authoritative for normalized interpretation.",
+      "appliesTo": [
+        "service"
+      ],
+      "deprecated": false
+    },
+    {
+      "name": "atis:telecom5g:usageContext",
+      "description": "Migration-only free-form compatibility context. MUST NOT appear in a strict v1.0.0 CBOM.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "deprecated": true
+    },
+    {
+      "name": "atis:telecom5g:cryptographyClass",
+      "description": "High-level class of the represented cryptographic algorithm/construction component. Allowed values are symmetric, asymmetric, hybrid, or unknown. hybrid denotes a single construction deliberately combining cryptographic schemes/classes; coexistence of symmetric and asymmetric algorithms on a protocol/binding does not make that protocol/binding hybrid. Primitive/function is represented by native CycloneDX algorithmProperties.primitive.",
+      "appliesTo": [
+        "component"
+      ],
+      "deprecated": false
+    },
+    {
+      "name": "atis:telecom5g:keyLength",
+      "description": "Key size in bits when useful as a summary/fallback field. Prefer native CycloneDX fields for cryptographic assets.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "deprecated": false
+    },
+    {
+      "name": "atis:telecom5g:curve",
+      "description": "Elliptic curve identifier when useful as a summary/fallback field. Prefer native CycloneDX fields for cryptographic assets.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "deprecated": false
+    },
+    {
+      "name": "atis:telecom5g:cert.profile",
+      "description": "Certificate profile identifier/reference when native CycloneDX certificate modeling is not available.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "deprecated": false
+    },
+    {
+      "name": "atis:telecom5g:cert.validation",
+      "description": "Certificate validation mechanism summary, e.g., OCSP, CRL. Prefer native CycloneDX certificate objects where detailed data is needed.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "deprecated": false
+    },
+    {
+      "name": "atis:telecom5g:pki.usage",
+      "description": "High-level indicator that PKI/X.509 is used for the service/binding. Detailed certificate/key material should use native CycloneDX CBOM structures.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "deprecated": false
+    },
+    {
+      "name": "atis:telecom5g:pki.role",
+      "description": "High-level PKI role of the subject in scope. Authentication mode is modeled separately.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "deprecated": false
+    },
+    {
+      "name": "atis:telecom5g:pki.authenticationMode",
+      "description": "Authentication mode for PKI/X.509 use, kept distinct from PKI role. Where it describes the same subject as sbi.mutualAuthentication, the two properties MUST be consistent.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "deprecated": false
+    },
+    {
+      "name": "atis:telecom5g:pki.trustAnchor",
+      "description": "Trust anchor identifier or label when needed for operational context.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "deprecated": false
+    },
+    {
+      "name": "atis:telecom5g:trust.domain",
+      "description": "Trust domain/zone classification, e.g., access, core, inter-PLMN.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "deprecated": false
+    },
+    {
+      "name": "atis:telecom5g:trust.boundary",
+      "description": "Boolean-like indicator that the service/binding sits at a trust boundary.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "deprecated": false
+    },
+    {
+      "name": "atis:telecom5g:spec.primary",
+      "description": "Primary 3GPP specification reference when native CycloneDX externalReferences cannot be used.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "deprecated": false
+    },
+    {
+      "name": "atis:telecom5g:spec.crypto",
+      "description": "Crypto-specific specification reference when native CycloneDX externalReferences cannot be used.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "deprecated": false
+    },
+    {
+      "name": "atis:telecom5g:nasIntegrityAlgorithm",
+      "description": "NAS integrity algorithm identifier.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "deprecated": false
+    },
+    {
+      "name": "atis:telecom5g:nasConfidentialityAlgorithm",
+      "description": "NAS confidentiality algorithm identifier.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "deprecated": false
+    },
+    {
+      "name": "atis:telecom5g:upIntegrityAlgorithm",
+      "description": "User-plane integrity algorithm identifier where UP integrity is used/activated.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "deprecated": false
+    },
+    {
+      "name": "atis:telecom5g:suciProtectionScheme",
+      "description": "SUCI protection scheme used for SUPI concealment when applicable.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "deprecated": false
+    },
+    {
+      "name": "atis:telecom5g:sbi.mutualAuthentication",
+      "description": "Indicates whether mutual authentication is required/implemented for SBI.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "deprecated": false
+    },
+    {
+      "name": "atis:telecom5g:oauthTokenType",
+      "description": "NF access token type used for SBI authorization.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "deprecated": false
+    },
+    {
+      "name": "atis:telecom5g:oauthTokenProtection",
+      "description": "Protection mechanism used for an OAuth/JWT access token in the 3GPP profile.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "deprecated": false
+    }
+  ],
+  "legacyPatterns": [
+    {
+      "pattern": "^atis:telecom5g:iface\\.[A-Za-z][A-Za-z0-9_.-]*\\.(securityObjective|protectionContext|cryptoUsageType|protocol|securityConstruct|cryptography|effectiveProtocol|effectiveConstruct|effectiveCryptography|usageContext|standardRefs)$",
+      "description": "Legacy compact per-interface syntax. Distinct binding services are preferred in v1.0.0.",
+      "strictConformance": "prohibited"
+    },
+    {
+      "pattern": "^atis:telecom5g:iface\\.[A-Za-z][A-Za-z0-9_.-]*\\.cert\\.(keyType|keyLength|curve|validation)$",
+      "description": "Legacy compact per-interface certificate summary properties.",
+      "strictConformance": "prohibited"
+    }
+  ]
+}

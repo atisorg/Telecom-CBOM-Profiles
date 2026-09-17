@@ -1,0 +1,37 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.7",
+  "version": 1,
+  "metadata": {
+    "properties": [
+      {
+        "name": "atis:telecom5g:profile",
+        "value": "3gpp-5g-arch-cbom/1.0.0"
+      },
+      {
+        "name": "atis:telecom5g:taxonomyVersion",
+        "value": "1.0.0"
+      }
+    ]
+  },
+  "services": [
+    {
+      "name": "SEPP-N32-c",
+      "bom-ref": "binding:nf:SEPP:N32-c",
+      "properties": [
+        {
+          "name": "atis:telecom5g:bindingType",
+          "value": "reference-point"
+        },
+        {
+          "name": "atis:telecom5g:binding",
+          "value": "N32-c"
+        },
+        {
+          "name": "atis:telecom5g:pki.role",
+          "value": "mutual"
+        }
+      ]
+    }
+  ]
+}

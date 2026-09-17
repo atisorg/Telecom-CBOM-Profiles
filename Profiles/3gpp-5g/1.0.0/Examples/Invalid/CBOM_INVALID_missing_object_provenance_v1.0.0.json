@@ -1,0 +1,31 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.7",
+  "version": 1,
+  "metadata": {
+    "properties": [
+      {
+        "name": "atis:telecom5g:profile",
+        "value": "3gpp-5g-arch-cbom/1.0.0"
+      },
+      {
+        "name": "atis:telecom5g:taxonomyVersion",
+        "value": "1.0.0"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "cryptographic-asset",
+      "name": "PRINS",
+      "bom-ref": "crypto/protocol/prins@1.0",
+      "cryptoProperties": {
+        "assetType": "protocol",
+        "protocolProperties": {
+          "type": "prins",
+          "version": "1.0"
+        }
+      }
+    }
+  ]
+}

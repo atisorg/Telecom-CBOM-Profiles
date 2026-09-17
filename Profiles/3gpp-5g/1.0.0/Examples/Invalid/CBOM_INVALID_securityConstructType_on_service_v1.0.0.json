@@ -1,0 +1,37 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.7",
+  "version": 1,
+  "metadata": {
+    "properties": [
+      {
+        "name": "atis:telecom5g:profile",
+        "value": "3gpp-5g-arch-cbom/1.0.0"
+      },
+      {
+        "name": "atis:telecom5g:taxonomyVersion",
+        "value": "1.0.0"
+      }
+    ]
+  },
+  "services": [
+    {
+      "name": "Bad construct summary",
+      "bom-ref": "nf:AMF",
+      "properties": [
+        {
+          "name": "atis:telecom5g:entityType",
+          "value": "AMF"
+        },
+        {
+          "name": "atis:telecom5g:securityConstruct",
+          "value": "JWS"
+        },
+        {
+          "name": "atis:telecom5g:securityConstructType",
+          "value": "security-format"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1554 @@
+{
+  "name": "ATIS Telecom5G Property Taxonomy",
+  "namespace": "atis:telecom5g",
+  "version": "1.0.0",
+  "profileMarker": "3gpp-5g-arch-cbom/1.0.0",
+  "description": "Machine-readable conformance extract aligned to the normative ATIS telecom5g 1.0.0 human-readable taxonomy and profile.",
+  "scopeNote": "3GPP 5G cryptographic inventory baseline: TR 33.938 V19.2.0. The baseline governs the crypto inventory, not every 5G architecture vocabulary; out-of-baseline crypto constructs require explicit object-scoped provenance.",
+  "controlled_vocabularies": {
+    "cbom.scope": [
+      "vendor",
+      "deployed"
+    ],
+    "assertion": [
+      "supported",
+      "effective"
+    ],
+    "inventoryCompleteness": [
+      "complete",
+      "partial",
+      "unknown"
+    ],
+    "securityObjective": [
+      "Authentication",
+      "Authorization",
+      "Confidentiality",
+      "Integrity",
+      "ReplayProtection"
+    ],
+    "protectionContext": [
+      "control-plane",
+      "user-plane",
+      "api",
+      "signaling",
+      "roaming",
+      "service-based-interface",
+      "application-layer",
+      "transport"
+    ],
+    "cryptoUsageType": [
+      "Authentication",
+      "Confidentiality Protection",
+      "Integrity Protection",
+      "Hash Function",
+      "Digital Signature",
+      "Key Agreement",
+      "Session Key Derivation"
+    ],
+    "protocol": [
+      "TLS 1.2",
+      "TLS 1.3",
+      "DTLS 1.2",
+      "DTLS 1.3",
+      "EAP-TLS",
+      "EAP-TTLS",
+      "QUIC",
+      "MPQUIC",
+      "MIKEY-SAKKE",
+      "IKEv2",
+      "IPsec ESP",
+      "EAP-AKA'",
+      "5G-AKA",
+      "MOBIKE",
+      "OCSP",
+      "PRINS"
+    ],
+    "securityConstruct": [
+      "ECIES",
+      "PKI",
+      "COSE",
+      "PDCP security",
+      "NAS security",
+      "KDF",
+      "JWE",
+      "JWS",
+      "OAuth 2.0"
+    ],
+    "securityConstructType": [
+      "cryptographic-scheme",
+      "trust-framework",
+      "security-format",
+      "layer-security-function",
+      "cryptographic-function",
+      "authorization-framework"
+    ],
+    "bindingType": [
+      "reference-point",
+      "nf-service-interface",
+      "protocol-based-interface",
+      "application-interface",
+      "internal-interface",
+      "other"
+    ],
+    "3gppRelease": [
+      "Rel-15",
+      "Rel-16",
+      "Rel-17",
+      "Rel-18",
+      "Rel-19"
+    ],
+    "entityType": [
+      "AMF",
+      "SMF",
+      "UPF",
+      "AUSF",
+      "UDM",
+      "UDR",
+      "PCF",
+      "NRF",
+      "NSSF",
+      "NEF",
+      "AF",
+      "BSF",
+      "CHF",
+      "NWDAF",
+      "SEPP",
+      "N3IWF",
+      "gNB-CU",
+      "gNB-DU",
+      "gNB",
+      "ng-eNB",
+      "UE",
+      "5G-EIR"
+    ],
+    "nfType": [
+      "AMF",
+      "SMF",
+      "UPF",
+      "AUSF",
+      "UDM",
+      "UDR",
+      "PCF",
+      "NRF",
+      "NSSF",
+      "NEF",
+      "AF",
+      "BSF",
+      "CHF",
+      "NWDAF",
+      "SEPP",
+      "N3IWF",
+      "gNB-CU",
+      "gNB-DU",
+      "gNB",
+      "ng-eNB",
+      "UE",
+      "5G-EIR"
+    ],
+    "nasIntegrityAlgorithm": [
+      "NIA0",
+      "NIA1",
+      "NIA2",
+      "NIA3"
+    ],
+    "nasConfidentialityAlgorithm": [
+      "NEA0",
+      "NEA1",
+      "NEA2",
+      "NEA3"
+    ],
+    "upIntegrityAlgorithm": [
+      "NIA1",
+      "NIA2",
+      "NIA3"
+    ],
+    "suciProtectionScheme": [
+      "null-scheme",
+      "profile-a",
+      "profile-b"
+    ],
+    "oauthTokenType": [
+      "JWT"
+    ],
+    "oauthTokenProtection": [
+      "JWS"
+    ],
+    "booleanString": [
+      "true",
+      "false"
+    ],
+    "pkiRole": [
+      "client",
+      "server",
+      "ca",
+      "trust-anchor",
+      "other",
+      "unknown"
+    ],
+    "pkiAuthenticationMode": [
+      "one-way",
+      "mutual",
+      "other",
+      "unknown"
+    ],
+    "cryptographyClass": [
+      "symmetric",
+      "asymmetric",
+      "hybrid",
+      "unknown"
+    ]
+  },
+  "canonical_bindings": {
+    "N1": "reference-point",
+    "N2": "reference-point",
+    "N3": "reference-point",
+    "N4": "reference-point",
+    "N6": "reference-point",
+    "N9": "reference-point",
+    "N11": "reference-point",
+    "N12": "reference-point",
+    "N15": "reference-point",
+    "N22": "reference-point",
+    "N32": "reference-point",
+    "N32-c": "reference-point",
+    "N32-f": "reference-point",
+    "Xn": "reference-point",
+    "F1": "reference-point",
+    "E1": "reference-point",
+    "Ua": "application-interface",
+    "NEF-AF": "application-interface",
+    "Nausf_UEAuthentication": "nf-service-interface",
+    "Nudm_UEAuthentication": "nf-service-interface"
+  },
+  "protection_context_facets": {
+    "plane": [
+      "control-plane",
+      "user-plane"
+    ],
+    "interface/application context": [
+      "api",
+      "service-based-interface"
+    ],
+    "layer": [
+      "application-layer",
+      "transport"
+    ],
+    "operational context": [
+      "signaling",
+      "roaming"
+    ]
+  },
+  "properties": [
+    {
+      "name": "atis:telecom5g:profile",
+      "description": "Identifies the ATIS 5G CBOM profile and version claimed by this BOM.",
+      "appliesTo": [
+        "metadata"
+      ],
+      "value": {
+        "type": "string",
+        "enum": [
+          "3gpp-5g-arch-cbom/1.0.0"
+        ]
+      },
+      "cardinality": "MUST appear once"
+    },
+    {
+      "name": "atis:telecom5g:taxonomyVersion",
+      "description": "Identifies the ATIS telecom5g property taxonomy version used by this BOM. This version is independent of the profile version and the CycloneDX implementation-binding version.",
+      "appliesTo": [
+        "metadata"
+      ],
+      "value": {
+        "type": "string",
+        "enum": [
+          "1.0.0"
+        ]
+      },
+      "cardinality": "MUST appear once"
+    },
+    {
+      "name": "atis:telecom5g:cbom.scope",
+      "description": "Declares whether the CBOM represents vendor capability or deployment-specific posture. Strict v1.0.0 conformance requires exactly one scope.",
+      "appliesTo": [
+        "metadata"
+      ],
+      "value": {
+        "type": "string",
+        "enum": [
+          "vendor",
+          "deployed"
+        ]
+      },
+      "cardinality": "MUST appear once"
+    },
+    {
+      "name": "atis:telecom5g:baselineRelease",
+      "description": "BOM-level default 3GPP architecture/specification release for represented entities and bindings unless an object supplies 3gppSpecRelease.",
+      "appliesTo": [
+        "metadata"
+      ],
+      "value": {
+        "type": "string",
+        "enum": [
+          "Rel-15",
+          "Rel-16",
+          "Rel-17",
+          "Rel-18",
+          "Rel-19"
+        ]
+      },
+      "cardinality": "MAY appear once"
+    },
+    {
+      "name": "atis:telecom5g:inventoryBaseline",
+      "description": "Specific cryptographic inventory baseline used by the profile or producer.",
+      "appliesTo": [
+        "metadata"
+      ],
+      "value": {
+        "type": "string",
+        "enum": [
+          "3GPP TR 33.938 V19.2.0"
+        ]
+      },
+      "cardinality": "SHOULD appear once"
+    },
+    {
+      "name": "atis:telecom5g:inventoryCompleteness",
+      "description": "Producer assertion about completeness of the in-scope telecom cryptographic inventory declarations represented by this CBOM. Meaning is scope-relative; complete does not imply that absent capabilities or deployment states are unsupported/not used.",
+      "appliesTo": [
+        "metadata"
+      ],
+      "value": {
+        "type": "string",
+        "enum": [
+          "complete",
+          "partial",
+          "unknown"
+        ]
+      },
+      "cardinality": "SHOULD appear once"
+    },
+    {
+      "name": "atis:telecom5g:inventoryScopeRef",
+      "description": "References a represented entity or reified binding bom-ref that forms an explicit root of the inventory scope. At least one scope root is required when inventoryCompleteness=complete.",
+      "appliesTo": [
+        "metadata"
+      ],
+      "value": {
+        "type": "string",
+        "pattern": "^.+$"
+      },
+      "cardinality": "MAY appear multiple times; MUST appear at least once when complete"
+    },
+    {
+      "name": "atis:telecom5g:scenario",
+      "description": "Architecture scenario target, e.g., TS23.501-roaming.",
+      "appliesTo": [
+        "metadata"
+      ],
+      "value": {
+        "type": "string"
+      },
+      "cardinality": "MAY appear once"
+    },
+    {
+      "name": "atis:telecom5g:entityType",
+      "description": "3GPP 5GS entity or Network Function type represented by the CBOM. The name intentionally includes non-NF entities such as UE, gNB, and ng-eNB. Where applicable, cryptographic usage for that entity is aligned with TR 33.938.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "value": {
+        "type": "string",
+        "enum": [
+          "AMF",
+          "SMF",
+          "UPF",
+          "AUSF",
+          "UDM",
+          "UDR",
+          "PCF",
+          "NRF",
+          "NSSF",
+          "NEF",
+          "AF",
+          "BSF",
+          "CHF",
+          "NWDAF",
+          "SEPP",
+          "N3IWF",
+          "gNB-CU",
+          "gNB-DU",
+          "gNB",
+          "ng-eNB",
+          "UE",
+          "5G-EIR"
+        ]
+      },
+      "cardinality": "MAY appear once"
+    },
+    {
+      "name": "atis:telecom5g:nfType",
+      "description": "Migration alias for atis:telecom5g:entityType. MUST NOT appear in a strict v1.0.0 CBOM.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "value": {
+        "type": "string",
+        "enum": [
+          "AMF",
+          "SMF",
+          "UPF",
+          "AUSF",
+          "UDM",
+          "UDR",
+          "PCF",
+          "NRF",
+          "NSSF",
+          "NEF",
+          "AF",
+          "BSF",
+          "CHF",
+          "NWDAF",
+          "SEPP",
+          "N3IWF",
+          "gNB-CU",
+          "gNB-DU",
+          "gNB",
+          "ng-eNB",
+          "UE",
+          "5G-EIR"
+        ]
+      },
+      "cardinality": "MUST NOT appear in strict v1.0.0",
+      "deprecated": true,
+      "strictConformance": "prohibited"
+    },
+    {
+      "name": "atis:telecom5g:3gppSpecRelease",
+      "description": "Object-level 3GPP release for the entity or binding; when present it explicitly overrides metadata baselineRelease for that object.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "value": {
+        "type": "string",
+        "enum": [
+          "Rel-15",
+          "Rel-16",
+          "Rel-17",
+          "Rel-18",
+          "Rel-19"
+        ]
+      },
+      "cardinality": "MAY appear once"
+    },
+    {
+      "name": "atis:telecom5g:nf.name",
+      "description": "Canonical NF identifier when native service/component name is not canonical. NF-scoped only; subject MUST be classified as an NF.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "value": {
+        "type": "string"
+      },
+      "cardinality": "MAY appear once"
+    },
+    {
+      "name": "atis:telecom5g:nf.type",
+      "description": "Optional NF category, e.g., SBA, Access, UserPlane, RoamingSecurity. NF-scoped only; subject MUST be classified as an NF.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "value": {
+        "type": "string"
+      },
+      "cardinality": "MAY appear once"
+    },
+    {
+      "name": "atis:telecom5g:nf.role",
+      "description": "Optional NF architecture role hint, e.g., control-plane, user-plane, security-edge. NF-scoped only; subject MUST be classified as an NF.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "value": {
+        "type": "string"
+      },
+      "cardinality": "MAY appear once"
+    },
+    {
+      "name": "atis:telecom5g:bindingType",
+      "description": "Semantic kind of the modeled 5G architectural binding/interface.",
+      "appliesTo": [
+        "service"
+      ],
+      "value": {
+        "type": "string",
+        "enum": [
+          "reference-point",
+          "nf-service-interface",
+          "protocol-based-interface",
+          "application-interface",
+          "internal-interface",
+          "other"
+        ]
+      },
+      "cardinality": "MUST appear once per reified binding"
+    },
+    {
+      "name": "atis:telecom5g:binding",
+      "description": "Canonical 3GPP architectural binding/interface label, e.g., N2, N32-f, Ua, NEF-AF, or Nausf_UEAuthentication. A protocol name such as GTP-C or 5G-AKA is not itself a binding identifier.",
+      "appliesTo": [
+        "service"
+      ],
+      "value": {
+        "type": "string"
+      },
+      "cardinality": "MUST appear once per reified binding"
+    },
+    {
+      "name": "atis:telecom5g:interfaces",
+      "description": "Migration-only compatibility summary listing 3GPP reference points supported/exposed by an NF or entity. MUST NOT appear in a strict v1.0.0 CBOM.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "value": {
+        "type": "string",
+        "pattern": "^[A-Za-z][A-Za-z0-9_.-]*(,[A-Za-z][A-Za-z0-9_.-]*)*$"
+      },
+      "cardinality": "MUST NOT appear in strict v1.0.0",
+      "deprecated": true,
+      "strictConformance": "prohibited"
+    },
+    {
+      "name": "atis:telecom5g:interface",
+      "description": "Migration-only compatibility property for a single 3GPP reference point. MUST NOT appear in a strict v1.0.0 CBOM.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "value": {
+        "type": "string",
+        "pattern": "^[A-Za-z][A-Za-z0-9_.-]*$"
+      },
+      "cardinality": "MUST NOT appear in strict v1.0.0",
+      "deprecated": true,
+      "strictConformance": "prohibited"
+    },
+    {
+      "name": "atis:telecom5g:assertion",
+      "description": "Migration-only compatibility qualifier for a crypto statement as supported or effective. MUST NOT appear in a strict v1.0.0 CBOM.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "value": {
+        "type": "string",
+        "enum": [
+          "supported",
+          "effective"
+        ]
+      },
+      "cardinality": "MUST NOT appear in strict v1.0.0",
+      "deprecated": true,
+      "strictConformance": "prohibited"
+    },
+    {
+      "name": "atis:telecom5g:crypto.supportedProtocols",
+      "description": "Vendor capability summary of canonical cryptographic protocols supported by the represented entity/product.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "value": {
+        "type": "string",
+        "enum": [
+          "TLS 1.2",
+          "TLS 1.3",
+          "DTLS 1.2",
+          "DTLS 1.3",
+          "EAP-TLS",
+          "EAP-TTLS",
+          "QUIC",
+          "MPQUIC",
+          "MIKEY-SAKKE",
+          "IKEv2",
+          "IPsec ESP",
+          "EAP-AKA'",
+          "5G-AKA",
+          "MOBIKE",
+          "OCSP",
+          "PRINS"
+        ]
+      },
+      "cardinality": "MAY appear multiple times"
+    },
+    {
+      "name": "atis:telecom5g:crypto.supportedConstructs",
+      "description": "Vendor capability summary of canonical non-protocol security constructs supported by the represented entity/product.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "value": {
+        "type": "string",
+        "enum": [
+          "ECIES",
+          "PKI",
+          "COSE",
+          "PDCP security",
+          "NAS security",
+          "KDF",
+          "JWE",
+          "JWS",
+          "OAuth 2.0"
+        ]
+      },
+      "cardinality": "MAY appear multiple times"
+    },
+    {
+      "name": "atis:telecom5g:crypto.supportedCryptography",
+      "description": "Vendor capability summary using noncanonical display/index labels for cryptographic algorithms, suites, or primitives supported by the represented entity/product. Each value MUST correspond to a detailed cryptographic asset; native CycloneDX cryptoProperties are authoritative for normalized interpretation.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "value": {
+        "type": "string"
+      },
+      "cardinality": "MAY appear multiple times"
+    },
+    {
+      "name": "atis:telecom5g:securityObjective",
+      "description": "Security objective provided on the binding, kept distinct from operational context and cryptographic usage type.",
+      "appliesTo": [
+        "service"
+      ],
+      "value": {
+        "type": "string",
+        "enum": [
+          "Authentication",
+          "Authorization",
+          "Confidentiality",
+          "Integrity",
+          "ReplayProtection"
+        ]
+      },
+      "cardinality": "MAY appear multiple times"
+    },
+    {
+      "name": "atis:telecom5g:protectionContext",
+      "description": "Multi-valued faceted operational-context classification. Values from different facets (plane, layer, interface/application context, operational context) MAY coexist and are not mutually exclusive. No unqualified other value is defined.",
+      "appliesTo": [
+        "service"
+      ],
+      "value": {
+        "type": "string",
+        "enum": [
+          "control-plane",
+          "user-plane",
+          "api",
+          "signaling",
+          "roaming",
+          "service-based-interface",
+          "application-layer",
+          "transport"
+        ]
+      },
+      "cardinality": "MAY appear multiple times"
+    },
+    {
+      "name": "atis:telecom5g:cryptoUsageType",
+      "description": "TR 33.938-aligned cryptographic feature or usage type for the represented cryptographic-asset instance. If the same algorithm has materially different usage semantics in different contexts, separate contextual asset instances with distinct bom-ref values SHOULD be used. Binding-level use is summary-only.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "value": {
+        "type": "string",
+        "enum": [
+          "Authentication",
+          "Confidentiality Protection",
+          "Integrity Protection",
+          "Hash Function",
+          "Digital Signature",
+          "Key Agreement",
+          "Session Key Derivation"
+        ]
+      },
+      "cardinality": "MAY appear multiple times"
+    },
+    {
+      "name": "atis:telecom5g:protocol",
+      "description": "Canonical telecom-facing protocol label used by the binding.",
+      "appliesTo": [
+        "service"
+      ],
+      "value": {
+        "type": "string",
+        "enum": [
+          "TLS 1.2",
+          "TLS 1.3",
+          "DTLS 1.2",
+          "DTLS 1.3",
+          "EAP-TLS",
+          "EAP-TTLS",
+          "QUIC",
+          "MPQUIC",
+          "MIKEY-SAKKE",
+          "IKEv2",
+          "IPsec ESP",
+          "EAP-AKA'",
+          "5G-AKA",
+          "MOBIKE",
+          "OCSP",
+          "PRINS"
+        ]
+      },
+      "cardinality": "MAY appear multiple times"
+    },
+    {
+      "name": "atis:telecom5g:securityConstruct",
+      "description": "Canonical telecom-facing non-protocol security construct identifier. Prefer a distinct referencable construct asset when graph identity is needed.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "value": {
+        "type": "string",
+        "enum": [
+          "ECIES",
+          "PKI",
+          "COSE",
+          "PDCP security",
+          "NAS security",
+          "KDF",
+          "JWE",
+          "JWS",
+          "OAuth 2.0"
+        ]
+      },
+      "cardinality": "MAY appear multiple times"
+    },
+    {
+      "name": "atis:telecom5g:securityConstructType",
+      "description": "Canonical semantic classification of a securityConstruct on a referencable construct component. It MUST match the v1.0.0 security-construct classification table. Binding/service summaries use securityConstruct without securityConstructType.",
+      "appliesTo": [
+        "component"
+      ],
+      "value": {
+        "type": "string",
+        "enum": [
+          "cryptographic-scheme",
+          "trust-framework",
+          "security-format",
+          "layer-security-function",
+          "cryptographic-function",
+          "authorization-framework"
+        ]
+      },
+      "cardinality": "MUST appear once per referencable security-construct component"
+    },
+    {
+      "name": "atis:telecom5g:cryptography",
+      "description": "Noncanonical display/index label for a cryptographic algorithm, suite, or primitive used by the binding. It MUST correspond to a detailed reachable cryptographic asset; native CycloneDX cryptoProperties are authoritative for normalized interpretation.",
+      "appliesTo": [
+        "service"
+      ],
+      "value": {
+        "type": "string"
+      },
+      "cardinality": "MAY appear multiple times"
+    },
+    {
+      "name": "atis:telecom5g:effectiveProtocol",
+      "description": "Protocol known to be active, enforced, negotiated, or directly observed in the deployed binding. Mere configuration is not sufficient.",
+      "appliesTo": [
+        "service"
+      ],
+      "value": {
+        "type": "string",
+        "enum": [
+          "TLS 1.2",
+          "TLS 1.3",
+          "DTLS 1.2",
+          "DTLS 1.3",
+          "EAP-TLS",
+          "EAP-TTLS",
+          "QUIC",
+          "MPQUIC",
+          "MIKEY-SAKKE",
+          "IKEv2",
+          "IPsec ESP",
+          "EAP-AKA'",
+          "5G-AKA",
+          "MOBIKE",
+          "OCSP",
+          "PRINS"
+        ]
+      },
+      "cardinality": "MAY appear multiple times"
+    },
+    {
+      "name": "atis:telecom5g:effectiveConstruct",
+      "description": "Non-protocol security construct known to be active, enforced, negotiated, or directly observed in the deployed binding. Mere configuration is not sufficient.",
+      "appliesTo": [
+        "service"
+      ],
+      "value": {
+        "type": "string",
+        "enum": [
+          "ECIES",
+          "PKI",
+          "COSE",
+          "PDCP security",
+          "NAS security",
+          "KDF",
+          "JWE",
+          "JWS",
+          "OAuth 2.0"
+        ]
+      },
+      "cardinality": "MAY appear multiple times"
+    },
+    {
+      "name": "atis:telecom5g:effectiveCryptography",
+      "description": "Noncanonical display/index label for an algorithm or suite known to be active, enforced, negotiated, or directly observed in the deployed binding. It MUST correspond to a detailed reachable asset; native CycloneDX cryptoProperties are authoritative for normalized interpretation.",
+      "appliesTo": [
+        "service"
+      ],
+      "value": {
+        "type": "string"
+      },
+      "cardinality": "MAY appear multiple times"
+    },
+    {
+      "name": "atis:telecom5g:usageContext",
+      "description": "Migration-only free-form compatibility context. MUST NOT appear in a strict v1.0.0 CBOM.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "value": {
+        "type": "string"
+      },
+      "cardinality": "MUST NOT appear in strict v1.0.0",
+      "deprecated": true,
+      "strictConformance": "prohibited"
+    },
+    {
+      "name": "atis:telecom5g:cryptographyClass",
+      "description": "High-level class of the represented cryptographic algorithm/construction component. Allowed values are symmetric, asymmetric, hybrid, or unknown. hybrid denotes a single construction deliberately combining cryptographic schemes/classes; coexistence of symmetric and asymmetric algorithms on a protocol/binding does not make that protocol/binding hybrid. Primitive/function is represented by native CycloneDX algorithmProperties.primitive.",
+      "appliesTo": [
+        "component"
+      ],
+      "value": {
+        "type": "string",
+        "enum": [
+          "symmetric",
+          "asymmetric",
+          "hybrid",
+          "unknown"
+        ]
+      },
+      "cardinality": "MAY appear once"
+    },
+    {
+      "name": "atis:telecom5g:keyLength",
+      "description": "Key size in bits when useful as a summary/fallback field. Prefer native CycloneDX fields for cryptographic assets.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "value": {
+        "type": "string",
+        "pattern": "^[0-9]+$"
+      },
+      "cardinality": "MAY appear once"
+    },
+    {
+      "name": "atis:telecom5g:curve",
+      "description": "Elliptic curve identifier when useful as a summary/fallback field. Prefer native CycloneDX fields for cryptographic assets.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "value": {
+        "type": "string"
+      },
+      "cardinality": "MAY appear once"
+    },
+    {
+      "name": "atis:telecom5g:cert.profile",
+      "description": "Certificate profile identifier/reference when native CycloneDX certificate modeling is not available.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "value": {
+        "type": "string"
+      },
+      "cardinality": "MAY appear once"
+    },
+    {
+      "name": "atis:telecom5g:cert.validation",
+      "description": "Certificate validation mechanism summary, e.g., OCSP, CRL. Prefer native CycloneDX certificate objects where detailed data is needed.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "value": {
+        "type": "string"
+      },
+      "cardinality": "MAY appear once"
+    },
+    {
+      "name": "atis:telecom5g:pki.usage",
+      "description": "High-level indicator that PKI/X.509 is used for the service/binding. Detailed certificate/key material should use native CycloneDX CBOM structures.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "value": {
+        "type": "string",
+        "enum": [
+          "true",
+          "false"
+        ]
+      },
+      "cardinality": "MAY appear once"
+    },
+    {
+      "name": "atis:telecom5g:pki.role",
+      "description": "High-level PKI role of the subject in scope. Authentication mode is modeled separately.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "value": {
+        "type": "string",
+        "enum": [
+          "client",
+          "server",
+          "ca",
+          "trust-anchor",
+          "other",
+          "unknown"
+        ]
+      },
+      "cardinality": "MAY appear once"
+    },
+    {
+      "name": "atis:telecom5g:pki.authenticationMode",
+      "description": "Authentication mode for PKI/X.509 use, kept distinct from PKI role. Where it describes the same subject as sbi.mutualAuthentication, the two properties MUST be consistent.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "value": {
+        "type": "string",
+        "enum": [
+          "one-way",
+          "mutual",
+          "other",
+          "unknown"
+        ]
+      },
+      "cardinality": "MAY appear once"
+    },
+    {
+      "name": "atis:telecom5g:pki.trustAnchor",
+      "description": "Trust anchor identifier or label when needed for operational context.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "value": {
+        "type": "string"
+      },
+      "cardinality": "MAY appear once"
+    },
+    {
+      "name": "atis:telecom5g:trust.domain",
+      "description": "Trust domain/zone classification, e.g., access, core, inter-PLMN.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "value": {
+        "type": "string"
+      },
+      "cardinality": "MAY appear once"
+    },
+    {
+      "name": "atis:telecom5g:trust.boundary",
+      "description": "Boolean-like indicator that the service/binding sits at a trust boundary.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "value": {
+        "type": "string",
+        "enum": [
+          "true",
+          "false"
+        ]
+      },
+      "cardinality": "MAY appear once"
+    },
+    {
+      "name": "atis:telecom5g:spec.primary",
+      "description": "Primary 3GPP specification reference when native CycloneDX externalReferences cannot be used.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "value": {
+        "type": "string"
+      },
+      "cardinality": "MAY appear once"
+    },
+    {
+      "name": "atis:telecom5g:spec.crypto",
+      "description": "Crypto-specific specification reference when native CycloneDX externalReferences cannot be used.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "value": {
+        "type": "string"
+      },
+      "cardinality": "MAY appear multiple times"
+    },
+    {
+      "name": "atis:telecom5g:nasIntegrityAlgorithm",
+      "description": "NAS integrity algorithm identifier.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "value": {
+        "type": "string",
+        "enum": [
+          "NIA0",
+          "NIA1",
+          "NIA2",
+          "NIA3"
+        ]
+      },
+      "cardinality": "MAY appear multiple times"
+    },
+    {
+      "name": "atis:telecom5g:nasConfidentialityAlgorithm",
+      "description": "NAS confidentiality algorithm identifier.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "value": {
+        "type": "string",
+        "enum": [
+          "NEA0",
+          "NEA1",
+          "NEA2",
+          "NEA3"
+        ]
+      },
+      "cardinality": "MAY appear multiple times"
+    },
+    {
+      "name": "atis:telecom5g:upIntegrityAlgorithm",
+      "description": "User-plane integrity algorithm identifier where UP integrity is used/activated.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "value": {
+        "type": "string",
+        "enum": [
+          "NIA1",
+          "NIA2",
+          "NIA3"
+        ]
+      },
+      "cardinality": "MAY appear multiple times"
+    },
+    {
+      "name": "atis:telecom5g:suciProtectionScheme",
+      "description": "SUCI protection scheme used for SUPI concealment when applicable.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "value": {
+        "type": "string",
+        "enum": [
+          "null-scheme",
+          "profile-a",
+          "profile-b"
+        ]
+      },
+      "cardinality": "MAY appear once"
+    },
+    {
+      "name": "atis:telecom5g:sbi.mutualAuthentication",
+      "description": "Indicates whether mutual authentication is required/implemented for SBI.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "value": {
+        "type": "string",
+        "enum": [
+          "true",
+          "false"
+        ]
+      },
+      "cardinality": "MAY appear once"
+    },
+    {
+      "name": "atis:telecom5g:oauthTokenType",
+      "description": "NF access token type used for SBI authorization.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "value": {
+        "type": "string",
+        "enum": [
+          "JWT"
+        ]
+      },
+      "cardinality": "MAY appear once"
+    },
+    {
+      "name": "atis:telecom5g:oauthTokenProtection",
+      "description": "Protection mechanism used for an OAuth/JWT access token in the 3GPP profile.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "value": {
+        "type": "string",
+        "enum": [
+          "JWS"
+        ]
+      },
+      "cardinality": "MAY appear once"
+    }
+  ],
+  "pattern_properties": [
+    {
+      "pattern": "^atis:telecom5g:iface\\.[A-Za-z][A-Za-z0-9_.-]*\\.(securityObjective|protectionContext|cryptoUsageType|protocol|securityConstruct|cryptography|effectiveProtocol|effectiveConstruct|effectiveCryptography|usageContext|standardRefs)$",
+      "description": "Legacy compact per-interface syntax. Distinct binding services are preferred in v1.0.0.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "value": {
+        "type": "string"
+      },
+      "deprecated": true,
+      "strictConformance": "prohibited"
+    },
+    {
+      "pattern": "^atis:telecom5g:iface\\.[A-Za-z][A-Za-z0-9_.-]*\\.cert\\.(keyType|keyLength|curve|validation)$",
+      "description": "Legacy compact per-interface certificate summary properties.",
+      "appliesTo": [
+        "service",
+        "component"
+      ],
+      "value": {
+        "type": "string"
+      },
+      "deprecated": true,
+      "strictConformance": "prohibited"
+    }
+  ],
+  "nf_entity_types": [
+    "AMF",
+    "SMF",
+    "UPF",
+    "AUSF",
+    "UDM",
+    "UDR",
+    "PCF",
+    "NRF",
+    "NSSF",
+    "NEF",
+    "AF",
+    "BSF",
+    "CHF",
+    "NWDAF",
+    "SEPP",
+    "N3IWF",
+    "5G-EIR"
+  ],
+  "dependency_edge_absence_semantics": "Absence of a CycloneDX dependsOn edge does not assert non-dependency; an edge may be omitted when generic dependency semantics would falsely assert simultaneous/conjunctive dependency for alternative, conditional, or choice relationships.",
+  "artifact_versions": {
+    "taxonomyVersion": "1.0.0",
+    "profileVersion": "1.0.0",
+    "implementationBinding": {
+      "format": "CycloneDX",
+      "specVersion": "1.7"
+    },
+    "profileCompatibleTaxonomyVersions": [
+      "1.0.0"
+    ]
+  },
+  "security_construct_type_map": {
+    "ECIES": "cryptographic-scheme",
+    "PKI": "trust-framework",
+    "COSE": "security-format",
+    "PDCP security": "layer-security-function",
+    "NAS security": "layer-security-function",
+    "KDF": "cryptographic-function",
+    "JWE": "security-format",
+    "JWS": "security-format",
+    "OAuth 2.0": "authorization-framework"
+  },
+  "out_of_baseline_provenance": [
+    {
+      "kind": "protocol",
+      "identifier": "PRINS",
+      "authoritativeSource": "3GPP TS 33.501 (applicable release/version)",
+      "externalReferenceType": "documentation",
+      "authoritativeUrl": "https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=3169",
+      "sourceVersionRequired": true,
+      "versionEvidence": "The component externalReference or its comment/metadata must identify the applicable TS 33.501 release/version when available."
+    }
+  ],
+  "crypto_usage_context_semantics": {
+    "scope": "cryptoUsageType applies to the represented cryptographic-asset instance, not universally to the algorithm family.",
+    "rule": "When the same algorithm has materially different usage semantics in different protocol/binding contexts, use separate contextual component instances with distinct bom-ref values.",
+    "sharedAssetAllowedWhen": "The asserted cryptoUsageType set is intended to apply identically in every context that references the shared asset."
+  },
+  "inventory_completeness_semantics": {
+    "scope": "inventoryCompleteness is interpreted relative to mandatory cbom.scope, explicit inventoryScopeRef roots, and declared scenario/release qualifiers; it does not claim coverage of the entire 5G System.",
+    "scopeRoots": "When inventoryCompleteness=complete, at least one metadata inventoryScopeRef MUST identify a represented entity or reified binding in the same CBOM.",
+    "vendor": "complete means all known positive supported-capability declarations within the explicitly declared scope roots are included.",
+    "deployed": "complete means all known positive deployment-specific cryptographic declarations within the explicitly declared scope roots are included.",
+    "absence": "complete never converts an absent declaration into unsupported, not configured, or not used.",
+    "scopeClosure": {
+      "definition": "least fixed-point closure over declared roots, dependency reachability, and summary-backed detailed assets",
+      "steps": [
+        "include each inventoryScopeRef root",
+        "include every object transitively reachable through CycloneDX dependencies[].dependsOn",
+        "for each included entity or reified binding, include every detailed protocol/security-construct/cryptographic asset required to back its ATIS supported, binding-level, or effective summaries even if an edge was intentionally omitted to avoid false conjunctive semantics",
+        "repeat dependency traversal and summary-backed inclusion until no additional object is added"
+      ],
+      "exclusion": "An object is not part of the scope closure merely because it is present elsewhere in the BOM.",
+      "openWorldCompatibility": "Summary-backed inclusion ensures alternative/conditional assets intentionally lacking generic dependency edges remain inside the declared completeness boundary.",
+      "multipleMatches": "If multiple detailed objects match the same in-scope summary value and no narrower graph association identifies one backing instance, all matching objects are included."
+    }
+  },
+  "deployment_effective_semantics": {
+    "deployedScope": "deployed identifies a deployment-specific CBOM and may contain configuration and effective-state information.",
+    "effective": "effective* is reserved for cryptography known to be active, enforced, negotiated, or directly observed in the represented deployment; mere configuration is insufficient.",
+    "timestamp": "A deployed CBOM that contains any effective* assertion must include CycloneDX metadata.timestamp; it is the as-of time shared by the effective assertions in that snapshot. Assertions with different as-of times should be emitted in separate snapshots.",
+    "vendorRestriction": "A vendor-scope CBOM must not contain effective* properties."
+  },
+  "cryptography_class_semantics": {
+    "appliesTo": "native cryptographic algorithm/construction component only",
+    "hybrid": "a single cryptographic construction deliberately combining schemes/classes; mere coexistence of symmetric and asymmetric algorithms in a protocol/binding is not hybrid",
+    "primitiveAuthority": "native CycloneDX cryptoProperties.algorithmProperties.primitive"
+  },
+  "baseline_scope_semantics": {
+    "inventoryBaseline": "3GPP TR 33.938 V19.2.0 is the cryptographic-inventory baseline, not the source vocabulary for every 5G architectural entity or binding.",
+    "provenance": "Object-scoped provenance is mandatory for protocol/security-construct entries admitted outside the cryptographic inventory baseline. Architectural entity/binding vocabularies may have their own 3GPP sources."
+  },
+  "strict_conformance": {
+    "deprecatedProperties": "Deprecated ATIS properties and legacy dotted iface.* syntax are prohibited in strict v1.0.0 conformance. Migration and conversion behavior is informative and outside the normative CBOM conformance model.",
+    "semanticTyping": "Semantic object roles are determined by ATIS/native properties, not by bom-ref naming conventions."
+  },
+  "semantic_placement_rules": {
+    "bindingServiceOnly": [
+      "atis:telecom5g:bindingType",
+      "atis:telecom5g:binding",
+      "atis:telecom5g:securityObjective",
+      "atis:telecom5g:protectionContext",
+      "atis:telecom5g:protocol",
+      "atis:telecom5g:cryptography",
+      "atis:telecom5g:effectiveProtocol",
+      "atis:telecom5g:effectiveConstruct",
+      "atis:telecom5g:effectiveCryptography"
+    ],
+    "bindingServiceOrConstructComponent": [
+      "atis:telecom5g:securityConstruct"
+    ],
+    "algorithmComponentOrBindingSummary": [
+      "atis:telecom5g:cryptoUsageType"
+    ],
+    "entitySubjectOnly": [
+      "atis:telecom5g:crypto.supportedProtocols",
+      "atis:telecom5g:crypto.supportedConstructs",
+      "atis:telecom5g:crypto.supportedCryptography"
+    ],
+    "algorithmComponentOnly": [
+      "atis:telecom5g:cryptographyClass"
+    ]
+  },
+  "protocol_normalization": {
+    "TLS 1.2": {
+      "type": "tls",
+      "version": "1.2"
+    },
+    "TLS 1.3": {
+      "type": "tls",
+      "version": "1.3"
+    },
+    "DTLS 1.2": {
+      "type": "dtls",
+      "version": "1.2"
+    },
+    "DTLS 1.3": {
+      "type": "dtls",
+      "version": "1.3"
+    },
+    "QUIC": {
+      "type": "quic"
+    },
+    "MPQUIC": {
+      "type": "quic"
+    },
+    "IKEv2": {
+      "type": "ike",
+      "version": "2"
+    },
+    "IPsec ESP": {
+      "type": "ipsec",
+      "version": "ESP"
+    },
+    "EAP-AKA'": {
+      "type": "eap-aka-prime"
+    },
+    "5G-AKA": {
+      "type": "5g-aka"
+    },
+    "PRINS": {
+      "type": "prins"
+    },
+    "EAP-TLS": {
+      "type": "other"
+    },
+    "EAP-TTLS": {
+      "type": "other"
+    },
+    "MIKEY-SAKKE": {
+      "type": "other"
+    },
+    "MOBIKE": {
+      "type": "other"
+    },
+    "OCSP": {
+      "type": "other"
+    }
+  },
+  "canonical_algorithm_identities": {
+    "AES-128-GCM": {
+      "algorithmFamily": "AES",
+      "primitive": "ae",
+      "parameterSetIdentifier": "128",
+      "mode": "gcm"
+    },
+    "SHA-256": {
+      "algorithmFamily": "SHA-2",
+      "primitive": "hash",
+      "parameterSetIdentifier": "256"
+    },
+    "PRF_HMAC_SHA2_256": {
+      "algorithmFamily": "HMAC",
+      "primitive": "kdf",
+      "parameterSetIdentifier": "SHA-256"
+    },
+    "AUTH_HMAC_SHA2_256_128": {
+      "algorithmFamily": "HMAC",
+      "primitive": "mac",
+      "parameterSetIdentifier": "SHA-256-128"
+    },
+    "ECDH P-256": {
+      "algorithmFamily": "ECDH",
+      "primitive": "key-agree",
+      "parameterSetIdentifierAny": [
+        "P-256",
+        "group19/P-256"
+      ]
+    },
+    "ECDSA P-256": {
+      "algorithmFamily": "ECDSA",
+      "primitive": "signature",
+      "parameterSetIdentifier": "P-256"
+    },
+    "MILENAGE": {
+      "algorithmFamily": "MILENAGE",
+      "primitive": "other",
+      "parameterSetIdentifier": "128"
+    },
+    "TUAK": {
+      "algorithmFamily": "TUAK",
+      "primitive": "other",
+      "parameterSetIdentifier": "128"
+    },
+    "HMAC-SHA-256": {
+      "algorithmFamily": "HMAC",
+      "primitive": "kdf",
+      "parameterSetIdentifier": "SHA-256"
+    }
+  },
+  "cryptography_summary_semantics": {
+    "status": "noncanonical display/index labels",
+    "normalizationAuthority": "native CycloneDX cryptographic asset fields",
+    "rule": "summary strings MUST NOT be used as canonical cross-vendor algorithm identifiers; normalized comparison uses the detailed native asset representation"
+  },
+  "duplicate_fact_consistency": {
+    "authority": "where an ATIS summary/fallback property and native CycloneDX represent the same fact, the native detailed representation is authoritative and the ATIS value MUST be consistent",
+    "machineChecks": [
+      "pki.authenticationMode mutual is incompatible with sbi.mutualAuthentication=false",
+      "numeric keyLength on an algorithm component must match a numeric native parameterSetIdentifier",
+      "curve on an algorithm component must agree with a recognizable native curve parameterSetIdentifier"
+    ],
+    "fallbackRule": "when equivalence cannot be mechanically established, producers remain responsible for consistency; validators may warn or use profile-specific extensions"
+  },
+  "release_semantics": {
+    "baselineRelease": "BOM-level default 3GPP architecture/specification release for represented objects unless overridden",
+    "3gppSpecRelease": "object-level explicit override of baselineRelease for that entity or binding",
+    "precedence": "object 3gppSpecRelease overrides metadata baselineRelease for that object; differing values are not inherently contradictory"
+  },
+  "effective_snapshot_semantics": {
+    "timestamp": "for a CBOM containing effective* assertions, native metadata.timestamp is the as-of time of the effective-state snapshot, not merely document-generation time",
+    "multiTime": "materially different effective-state times SHOULD be represented as separate snapshots until a structured evidence/time model exists"
+  },
+  "binding_association_semantics": {
+    "rule": "every reified binding service MUST have a bom-ref and MUST be a dependency target of at least one represented entity in the same CBOM",
+    "endpointScope": "v1.0.0 requires at least one represented entity association; it does not require both architectural endpoints"
+  },
+  "normative_language": {
+    "keywords": [
+      "MUST",
+      "MUST NOT",
+      "SHOULD",
+      "SHOULD NOT",
+      "MAY"
+    ],
+    "interpretation": "RFC 2119 / RFC 8174 when and only when capitalized",
+    "lowercase_modals": "descriptive, non-normative"
+  },
+  "normative_references": {
+    "CycloneDX": "CycloneDX Specification 1.7 JSON serialization and official JSON schema bundle (bom-1.7.schema.json)",
+    "RFC2119": "RFC 2119 / BCP 14",
+    "RFC8174": "RFC 8174 / BCP 14",
+    "3GPP_TR_33_938": "3GPP TR 33.938 V19.2.0, 3GPP Cryptographic Inventory, Release 19",
+    "3GPP_TS_33_501": "3GPP TS 33.501, Security architecture and procedures for 5G System",
+    "SemVer": "Semantic Versioning 2.0.0"
+  },
+  "artifact_status_and_precedence": {
+    "profile": "normative; authoritative for profile-level modeling, conformance, graph, scope, and interpretation rules",
+    "humanTaxonomy": "normative; authoritative for ATIS property names, controlled vocabularies, placement, and cardinality",
+    "machineTaxonomy": "derived conformance artifact; MUST remain consistent with normative text and cannot weaken it",
+    "overlaySchema": "derived conformance artifact; MUST remain consistent with normative text and cannot weaken it",
+    "pythonTooling": "reference implementation / informative tooling; not normative and not required for conformance",
+    "conflictRule": "If a publication defect creates a conflict, the normative profile and human-readable taxonomy control; the conflict MUST be reported and corrected in a subsequent version."
+  },
+  "semantic_versioning": {
+    "scheme": "Semantic Versioning 2.0.0",
+    "version": "1.0.0",
+    "preRelease": false,
+    "note": "A leading v in filenames/tags is not part of the Semantic Version; 1.0.0 is the first stable release in this version line."
+  },
+  "terms_and_definitions": {
+    "architecturalBindingInterface": "Named architectural connection, reference point, NF service interface, protocol-based interface, application interface, or internal interface represented by binding plus bindingType.",
+    "effectiveState": "Deployment-specific cryptographic state known active, enforced, negotiated, or directly observed at the metadata.timestamp as-of time; configuration or permission alone is not effective state.",
+    "inventoryScopeRoot": "Represented entity or reified binding whose bom-ref is named by atis:telecom5g:inventoryScopeRef.",
+    "inventoryScopeClosure": "Least fixed-point set derived from inventory scope roots under the profile scope-closure algorithm.",
+    "reifiedBinding": "CycloneDX service object used to give an architectural binding/interface bom-ref, ATIS binding properties, and graph identity; does not redefine the binding as a network service.",
+    "strictConformance": "Satisfaction of the official CycloneDX 1.7 schema plus all normative profile/human-taxonomy requirements without migration-only properties.",
+    "summaryIndexProperty": "ATIS property providing searchable/human-readable summary of detailed native CycloneDX content; it does not preserve pairwise relationships by itself."
+  },
+  "abbreviations": {
+    "5GC": "5G Core",
+    "5GS": "5G System",
+    "AF": "Application Function",
+    "AMF": "Access and Mobility Management Function",
+    "AUSF": "Authentication Server Function",
+    "BOM": "Bill of Materials",
+    "CBOM": "Cryptography Bill of Materials",
+    "CRQC": "Cryptographically Relevant Quantum Computer",
+    "GAA": "Generic Authentication Architecture",
+    "GBA": "Generic Bootstrapping Architecture",
+    "HBOM": "Hardware Bill of Materials",
+    "KDF": "Key Derivation Function",
+    "NAF": "Network Application Function",
+    "NEF": "Network Exposure Function",
+    "NF": "Network Function",
+    "NG-RAN": "Next Generation Radio Access Network",
+    "PKI": "Public Key Infrastructure",
+    "PQC": "Post-Quantum Cryptography",
+    "QSC": "Quantum-Safe Cryptography",
+    "QSCII": "Quantum-Safe Communications and Infrastructure Initiative",
+    "SBOM": "Software Bill of Materials",
+    "SBI": "Service-Based Interface",
+    "SEPP": "Security Edge Protection Proxy",
+    "TLS": "Transport Layer Security",
+    "TR": "Technical Report",
+    "TS": "Technical Specification",
+    "UDM": "Unified Data Management",
+    "UE": "User Equipment",
+    "PRINS": "Protocol for N32 Interconnect Security"
+  },
+  "canonical_binding_sources": {
+    "N1": "3GPP TS 23.501",
+    "N2": "3GPP TS 23.501",
+    "N3": "3GPP TS 23.501",
+    "N4": "3GPP TS 23.501",
+    "N6": "3GPP TS 23.501",
+    "N9": "3GPP TS 23.501",
+    "N11": "3GPP TS 23.501",
+    "N12": "3GPP TS 23.501",
+    "N15": "3GPP TS 23.501",
+    "N22": "3GPP TS 23.501",
+    "N32": "3GPP TS 23.501",
+    "N32-c": "3GPP TS 33.501",
+    "N32-f": "3GPP TS 33.501",
+    "Xn": "3GPP TS 38.423",
+    "F1": "3GPP TS 38.470",
+    "E1": "3GPP TS 38.460",
+    "Ua": "3GPP TS 33.220",
+    "NEF-AF": "3GPP TR 33.938 inventory context; 3GPP TS 29.522 NEF northbound API context; ATIS source-aligned descriptive label, not a claimed formal Nxx reference point",
+    "Nausf_UEAuthentication": "3GPP TS 29.509",
+    "Nudm_UEAuthentication": "3GPP TS 29.503"
+  },
+  "entity_type_sources": {
+    "5GS_core_and_UE": "3GPP TS 23.501",
+    "NG_RAN_entities": "3GPP TS 38.401",
+    "note": "5G-EIR is retained as a valid 5GC NF label even though it is outside the TR 33.938 V19.2.0 cryptographic inventory."
+  },
+  "pqc_qsc_scope": {
+    "assessmentRequirement": "This profile does not define or require a PQC/CRQC exposure or risk assessment.",
+    "externalMethodology": "Any derived assessment depends on an external methodology identifying its rules, provenance, and methodology version.",
+    "roadmap": "Interoperable PQC/QSC posture and exposure semantics are deferred until a stable vendor-neutral assessment methodology is defined."
+  },
+  "architecture_source_references": {
+    "3GPP_TS_23_501": "3GPP TS 23.501, System architecture for the 5G System (5GS)",
+    "3GPP_TS_38_401": "3GPP TS 38.401, NG-RAN; Architecture description",
+    "3GPP_TS_38_423": "3GPP TS 38.423, NG-RAN; Xn Application Protocol (XnAP)",
+    "3GPP_TS_38_470": "3GPP TS 38.470, NG-RAN; F1 general aspects and principles",
+    "3GPP_TS_38_460": "3GPP TS 38.460, NG-RAN; E1 general aspects and principles",
+    "3GPP_TS_33_220": "3GPP TS 33.220, Generic Authentication Architecture (GAA); Generic Bootstrapping Architecture (GBA)",
+    "3GPP_TS_29_522": "3GPP TS 29.522, 5G System; Network Exposure Function Northbound APIs; Stage 3",
+    "3GPP_TS_29_509": "3GPP TS 29.509, 5G System; Authentication Server Services; Stage 3",
+    "3GPP_TS_29_503": "3GPP TS 29.503, 5G System; Unified Data Management Services; Stage 3"
+  },
+  "publication_packaging": {
+    "ipRightsNotice": "IPR_AND_LICENSE_NOTICE.md",
+    "migrationGuide": "MIGRATION_GUIDE.md",
+    "cycloneDxPropertyTaxonomyCoordination": "CYCLONEDX_PROPERTY_TAXONOMY_COORDINATION.md",
+    "referenceToolingStatus": "non-normative"
+  }
+}

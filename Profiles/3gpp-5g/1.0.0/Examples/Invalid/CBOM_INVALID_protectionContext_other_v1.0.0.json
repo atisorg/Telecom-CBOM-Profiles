@@ -1,0 +1,49 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.7",
+  "version": 1,
+  "metadata": {
+    "properties": [
+      {
+        "name": "atis:telecom5g:profile",
+        "value": "3gpp-5g-arch-cbom/1.0.0"
+      },
+      {
+        "name": "atis:telecom5g:taxonomyVersion",
+        "value": "1.0.0"
+      },
+      {
+        "name": "atis:telecom5g:cbom.scope",
+        "value": "vendor"
+      },
+      {
+        "name": "atis:telecom5g:inventoryBaseline",
+        "value": "3GPP TR 33.938 V19.2.0"
+      },
+      {
+        "name": "atis:telecom5g:inventoryCompleteness",
+        "value": "partial"
+      }
+    ]
+  },
+  "services": [
+    {
+      "name": "N2 binding",
+      "bom-ref": "binding:nf:AMF:N2",
+      "properties": [
+        {
+          "name": "atis:telecom5g:bindingType",
+          "value": "reference-point"
+        },
+        {
+          "name": "atis:telecom5g:binding",
+          "value": "N2"
+        },
+        {
+          "name": "atis:telecom5g:protectionContext",
+          "value": "other"
+        }
+      ]
+    }
+  ]
+}
