@@ -8,6 +8,7 @@ The current published profile is the ATIS **3GPP-5G CBOM Profile Version 1.0.0**
 
 ```text
 telecom-cbom-profiles/
+├── CONTRIBUTING.md
 ├── README.md
 ├── ROADMAP.md
 ├── requirements.txt
