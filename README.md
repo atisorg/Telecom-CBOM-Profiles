@@ -13,7 +13,7 @@ telecom-cbom-profiles/
 ├── requirements.txt
 ├── Tools/
 │   └── validate_cbom.py
-└── Profiles/
+└── profiles/
     └── 3gpp-5g/
         └── 1.0.0/
             ├── README.md
