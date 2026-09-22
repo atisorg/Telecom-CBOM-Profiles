@@ -13,7 +13,7 @@ telecom-cbom-profiles/
 ├── requirements.txt
 ├── Tools/
 │   └── validate_cbom.py
-└── profiles/
+└── Profiles/
     └── 3gpp-5g/
         └── 1.0.0/
             ├── README.md
@@ -31,7 +31,7 @@ telecom-cbom-profiles/
 
 ## Organizing principles
 
-- **Documents and examples follow the profile** because they describe or instantiate profile-specific scope, vocabularies, semantics, baselines, and conformance expectations.
+- **Documents and examples follow the profile** because they describe or instantiate profile-specific scope, vocabularies, relationships, constraints, intended meanings, baselines, and conformance expectations.
 - **Reusable operational tools are repository-wide** when they are independent of any one profile.
 - **Profile-specific validation support remains with the profile.**
 - **Tests and QA remain with the profile** because they verify that profile/package, even when the tests happen to be implemented in Python.
