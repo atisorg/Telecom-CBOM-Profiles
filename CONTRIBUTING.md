@@ -8,14 +8,14 @@ This repository hosts **stable, implementer-focused** profiles, taxonomies, vali
 
 ## How to submit a request
 
-**Preferred method: [Open a GitHub Issue](https://github.com/atisorg/Telecom-CBOM-Profiles/issues/new/choose).** You will need a GitHub account to submit a request.
+**Preferred method: [Telecom CBOM change request template](https://github.com/atisorg/Telecom-CBOM-Profiles/blob/main/.github/ISSUE_TEMPLATE/change-request.yml).** To submit a request, [open the template as a new GitHub Issue](https://github.com/atisorg/Telecom-CBOM-Profiles/issues/new?template=change-request.yml). You will need a GitHub account to submit a request.
 
-1. Open the link above, or select **Issues → New issue** in this repository.
-2. Select the **Telecom CBOM change request** template, if available. Otherwise, choose a blank issue.
+1. Open the [Telecom CBOM change request form](https://github.com/atisorg/Telecom-CBOM-Profiles/issues/new?template=change-request.yml), or select **Issues → New issue** in this repository.
+2. Complete the **Telecom CBOM change request** form. You can [view the template file here](https://github.com/atisorg/Telecom-CBOM-Profiles/blob/main/.github/ISSUE_TEMPLATE/change-request.yml).
 3. Describe the change, its purpose, and the affected profile or taxonomy. Include standards references and a short example if available.
 4. Submit the issue. ATIS maintainers will review it and may request further details.
 
-If no template is displayed, include these details in the issue description:
+If the template is unavailable, [open a blank Issue](https://github.com/atisorg/Telecom-CBOM-Profiles/issues/new) and include these details:
 
 - **Profile/taxonomy** and **version** (for example, `telecom5g-cbom`, `1.0.0`)
 - **Request type**: property / enum / algorithm or protocol / 3GPP interface mapping / example / validation / test / documentation / new domain profile
@@ -25,7 +25,7 @@ If no template is displayed, include these details in the issue description:
 
 Requests may cover new cryptographic properties, 5G network-function and interface mappings, PQC or crypto-agility metadata, example CBOMs, validator behavior, or future domain-specific taxonomies.
 
-**Questions or difficulty using GitHub:** Contact ATIS through its established organizational channels until a dedicated project contact address is published. Where appropriate, technical change requests received outside GitHub may be recorded as Issues to support discussion and traceability. Do not post sensitive network, key, certificate-private-key, or customer information in this public repository.
+**Questions or difficulty using GitHub:** You may contact ATIS through the contact channel available on the [ATIS Quantum-Safe Communications and Information Initiative page](https://atis.org/initiatives/quantum/). GitHub Issues remain the preferred route for technical change requests so that proposals and feedback can be tracked. Do not post sensitive network, key, certificate-private-key, or customer information in this public repository.
 
 ## Review of submitted requests
 
