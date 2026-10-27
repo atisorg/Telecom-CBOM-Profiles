@@ -1,0 +1,79 @@
+name: Telecom CBOM change request
+description: Propose an enhancement, correction, or addition to an ATIS Telecom CBOM profile, taxonomy, example, or validation resource.
+title: "[Change Request]: "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for contributing to ATIS Telecom CBOM Profiles. Please describe the requested change and its value to implementers. Do not include confidential network configurations, credentials, subscriber data, or proprietary information you are not authorized to disclose. ATIS maintainers will review and triage submissions; submission does not guarantee acceptance.
+  - type: dropdown
+    id: request-type
+    attributes:
+      label: Request type
+      description: Select the closest category.
+      options:
+        - Property or metadata attribute
+        - Enumeration or allowed value
+        - 3GPP network function or interface mapping
+        - Cryptographic algorithm or protocol representation
+        - New profile or taxonomy package
+        - CBOM example
+        - Validation rule or tooling
+        - Test case
+        - Documentation or clarification
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: profile
+    attributes:
+      label: Profile or taxonomy
+      description: Identify the affected profile or taxonomy, if known.
+      placeholder: "e.g., telecom5g-cbom"
+  - type: input
+    id: version
+    attributes:
+      label: Affected version
+      placeholder: "e.g., 1.0.0 or proposed 1.x"
+  - type: textarea
+    id: proposed-change
+    attributes:
+      label: Proposed change
+      description: Explain what should be added, changed, or clarified.
+      placeholder: "Describe the requested behavior, property, enum, mapping, or example."
+    validations:
+      required: true
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Rationale and implementer impact
+      description: Explain the problem this solves and the value for carriers, vendors, or CBOM consumers.
+    validations:
+      required: true
+  - type: textarea
+    id: standards
+    attributes:
+      label: Standards references
+      description: Include relevant 3GPP, CycloneDX, IETF, NIST, or other specifications and clauses, where available.
+      placeholder: "e.g., 3GPP TS 33.501, relevant section"
+  - type: textarea
+    id: example
+    attributes:
+      label: Proposed CBOM example or expected representation
+      description: Include a small JSON fragment, pseudocode, or illustrative use case if helpful. Use fictional values only.
+      render: json
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies, compatibility, and validation considerations
+      description: Note affected network functions/interfaces, existing properties, compatibility constraints, or validation implications.
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Submission confirmation
+      options:
+        - label: I have checked for an existing Issue covering this request.
+          required: true
+        - label: I have not included confidential, sensitive, or unauthorized proprietary information.
+          required: true
