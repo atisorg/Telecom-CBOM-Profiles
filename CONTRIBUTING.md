@@ -1,97 +1,66 @@
-# Contributing
+# Contributing to ATIS Telecom CBOM Profiles
 
 Thank you for helping improve ATIS Telecom CBOM Profiles and taxonomies.
 
-This repository is intended to host **stable, implementer-focused** profiles, taxonomies, validation resources, tests, examples, and supporting documentation that enable consistent interchange and validation of CBOM data.
+This repository hosts **stable, implementer-focused** profiles, taxonomies, validation resources, tests, examples, and supporting documentation for consistent interchange and validation of cryptographic bill of materials (CBOM) data.
 
-> Note: Even if you are not a code or documentation contributor, you can still participate by submitting requests and feedback through GitHub Issues (see **Submitting requests** below).
+**You do not need to write code to contribute.** Telecom operators, vendors, standards participants, and other interested parties can submit requirements, report gaps, or suggest improvements through GitHub Issues.
+
+## How to submit a request
+
+**Preferred method: [Open a GitHub Issue](https://github.com/atisorg/Telecom-CBOM-Profiles/issues/new/choose).** You will need a GitHub account to submit a request.
+
+1. Open the link above, or select **Issues → New issue** in this repository.
+2. Select the **Telecom CBOM change request** template, if available. Otherwise, choose a blank issue.
+3. Describe the change, its purpose, and the affected profile or taxonomy. Include standards references and a short example if available.
+4. Submit the issue. ATIS maintainers will review it and may request further details.
+
+If no template is displayed, include these details in the issue description:
+
+- **Profile/taxonomy** and **version** (for example, `telecom5g-cbom`, `1.0.0`)
+- **Request type**: property / enum / algorithm or protocol / 3GPP interface mapping / example / validation / test / documentation / new domain profile
+- **Proposed change** and **reason for the change**, including implementer or carrier impact
+- **Standards alignment**, such as a relevant 3GPP specification and clause
+- **Illustrative CBOM fragment**, when useful (do not include secrets or proprietary deployment details)
+
+Requests may cover new cryptographic properties, 5G network-function and interface mappings, PQC or crypto-agility metadata, example CBOMs, validator behavior, or future domain-specific taxonomies.
+
+**Questions or difficulty using GitHub:** Contact ATIS through its established organizational channels until a dedicated project contact address is published. Where appropriate, technical change requests received outside GitHub may be recorded as Issues to support discussion and traceability. Do not post sensitive network, key, certificate-private-key, or customer information in this public repository.
+
+## Review of submitted requests
+
+ATIS will review submitted Issues, consider their relevance to the profile or taxonomy, and may seek clarification or additional technical input. Issues may be labeled:
+
+- `accepted` — accepted for further development or inclusion in a planned release
+- `needs-info` — additional details or examples are required
+- `deferred` — acknowledged but not currently scheduled
+- `rejected` — outside scope, unsuitable, or addressed by an existing mechanism
+
+ATIS will consider accepted requests for an appropriate future release, taking account of technical review, compatibility, and implementation impact. An accepted Issue does not mean the change has already been incorporated into a published profile. Changes included in a release will be documented in the relevant release notes or CHANGELOG.
 
 ## Ways to contribute
 
-- Suggest new properties, enums, or patterns for an existing profile or taxonomy
-- Report ambiguities or gaps, especially where standards alignment is unclear
-- Add or improve example CBOMs
+- Suggest properties, enumerations, or modeling patterns for an existing profile or taxonomy
+- Report ambiguities or gaps, especially in standards alignment
+- Propose network-function, interface, and cryptographic-dependency mappings
+- Add or improve informative example CBOMs
 - Improve ATIS validation rules, tests, and helper scripts
-- Improve supporting documentation
-- Propose a new ATIS profile or taxonomy package for an additional telecom domain
+- Improve documentation and implementation guidance
+- Propose a new ATIS profile or taxonomy package for another telecom domain
 
-## Repository structure
+## Submitting a Pull Request
 
-Contributions should follow the repository structure below:
+If you can implement a change, you may submit a Pull Request (PR):
 
-```text
-profiles/<profile>/<version>/
-Documents/
-Validation/
-Tests/
-Examples/
-```
+1. **Open an Issue first** for substantial changes, such as new property sets, validation behavior, or profile packages.
+2. Fork the repository and create a working branch.
+3. Make focused changes, including affected tests, examples, and documentation where practical.
+4. Open a PR against `main`, explain the change, and reference the Issue (for example, `Fixes #123`).
+5. Respond to review comments. ATIS will review the proposed changes and provide feedback before they are considered for merging.
 
-In general:
+For small editorial fixes, maintainers may accept a PR without a prior Issue.
 
-- `profiles/<profile>/<version>/` contains versioned ATIS profile and taxonomy artifacts.
-- `Documents/` contains supporting human-readable documentation and implementation guidance.
-- `Validation/` contains ATIS profile/taxonomy validation artifacts and related tooling.
-- `Tests/` contains test cases used to exercise and verify validation behavior.
-- `Examples/` contains informative example CBOMs and related sample artifacts.
-
-Do not create alternate top-level structures for taxonomy, validator, test, or example content unless the repository maintainers have agreed to an architectural change.
-
-## Submitting requests (no code required)
-
-If you would like ATIS to add or adjust properties, examples, validation rules, tests, or guidance, the preferred path is to open a **GitHub Issue**.
-
-### 1) Open a GitHub Issue
-
-Use the repository **Issues** tab and create a new issue. Please include as much of the following as possible:
-
-- **Profile/taxonomy name** (for example, `telecom5g-cbom`)
-- **Version** you are referencing (for example, `1.0.0`)
-- **Request type**: property / enum / example / validation / test / documentation
-- **What you want to change** (clear description)
-- **Why** (the problem it solves and consumer impact)
-- **Standards alignment** (for example, 3GPP specification and section if available)
-- **Example** (a small CBOM fragment or snippet showing desired usage)
-
-### 2) What happens next (maintainer workflow)
-
-Issues are triaged by the maintainer and typically labeled as one of:
-
-- `accepted` – planned for inclusion
-- `needs-info` – more detail needed (for example, specification section or example)
-- `deferred` – acknowledged but not scheduled yet
-- `rejected` – not aligned with scope or duplicates another mechanism
-
-For accepted items, the maintainer will map the change to the next appropriate release and update CHANGELOG notes.
-
-### 3) Submitting a Pull Request (optional)
-
-If you are able to implement changes yourself:
-
-1. Fork the repository.
-2. Create a branch.
-3. Submit a Pull Request referencing the Issue (for example, “Fixes #123”).
-
-PRs are reviewed and merged by the maintainer.
-
-## Ground rules
-
-- **Do not** duplicate the same normative profile or taxonomy content in multiple places.
-- Treat the applicable versioned content under `profiles/<profile>/<version>/` as the authoritative ATIS profile/taxonomy content for that release.
-- Keep supporting documentation in `Documents/`.
-- Keep ATIS-specific validation artifacts in `Validation/`.
-- Keep validation test cases in `Tests/`.
-- Keep examples in `Examples/` and treat them as **informative**, not normative.
-- Preserve the separation between official CycloneDX schema validation and ATIS profile/taxonomy validation.
-
-## Contribution workflow
-
-1. **Open an issue first** for substantial changes, such as new property sets, significant validation changes, or new profile/taxonomy packages.
-2. Create a branch and submit a PR referencing the issue.
-3. Keep changes small and reviewable when possible.
-4. Update all affected profile, documentation, validation, test, and example artifacts together where practical.
-
-### PR checklist
+### Pull Request checklist
 
 For changes affecting a profile or taxonomy:
 
@@ -104,61 +73,61 @@ For changes affecting a profile or taxonomy:
 - [ ] Confirmed examples pass the applicable ATIS profile/taxonomy validation
 - [ ] Updated release notes or CHANGELOG information as required
 
-## Validation expectations
+## Repository structure
 
-Strict ATIS 1.0.0 conformance uses a **two-layer validation architecture**:
+Contributions should follow the agreed repository structure:
 
 ```text
-Layer 1: Official CycloneDX 1.7 validation
+profiles/<profile>/<version>/
+Documents/
+Validation/
+Tests/
+Examples/
+```
+
+- `profiles/<profile>/<version>/` contains versioned authoritative ATIS profile and taxonomy artifacts.
+- `Documents/` contains supporting documentation and implementation guidance.
+- `Validation/` contains ATIS-specific validation artifacts and tooling.
+- `Tests/` contains validation test cases.
+- `Examples/` contains **informative**, not normative, example CBOMs.
+
+Please discuss proposed changes to the top-level directory structure through a GitHub Issue before implementing them. Some directories may be introduced as the repository evolves.
+
+## Ground rules
+
+- Do not duplicate normative profile or taxonomy content in multiple locations.
+- Treat the applicable versioned content under `profiles/<profile>/<version>/` as authoritative for that ATIS release.
+- Keep documentation, ATIS validation, tests, and examples in their respective agreed locations.
+- Preserve the distinction between the official CycloneDX specification and ATIS-specific profile and taxonomy requirements.
+- Proposals to change the upstream CycloneDX schema should be distinguished from changes to ATIS profiles and, where appropriate, coordinated with the CycloneDX project.
+- Do not submit private keys, secrets, confidential network configurations, or other sensitive information.
+
+## Validation expectations
+
+Strict ATIS 1.0.0 conformance uses **two separate validation layers**:
+
+```text
+Layer 1: Official CycloneDX 1.7 schema validation
                        +
 Layer 2: ATIS profile/taxonomy validation
                        =
 Strict ATIS 1.0.0 conformance
 ```
 
-These layers are intentionally separate:
+1. **Official CycloneDX 1.7 validation:** Validate CBOM documents against the official CycloneDX schema using suitable CycloneDX-compatible tooling.
+2. **ATIS profile/taxonomy validation:** Apply the rules for the applicable ATIS version, which may check recognized property names, allowed values and patterns, profile markers, and structural or semantic requirements.
 
-1. **Layer 1 — Official CycloneDX 1.7 validation**  
-   Validate the CBOM against the official CycloneDX 1.7 schema using appropriate CycloneDX-compatible tooling.
-
-2. **Layer 2 — ATIS profile/taxonomy validation**  
-   Apply the ATIS validation rules for the relevant profile/taxonomy version. These rules may verify, for example:
-   - recognized ATIS property names
-   - allowed values, enums, and patterns
-   - required ATIS profile or taxonomy markers
-   - profile-specific structural or semantic requirements
-
-The ATIS profile/taxonomy validation layer is **not a replacement for the official CycloneDX schema** and should not absorb or duplicate CycloneDX schema validation. A CBOM claiming strict ATIS 1.0.0 conformance must satisfy both validation layers.
-
-Where additional scenario-specific validation is provided, it should be placed within the agreed `Validation/` and `Tests/` structure and clearly identified as required or optional for the relevant profile/version.
+ATIS validation does not replace or duplicate official CycloneDX schema validation. Where additional scenario-specific validation is provided, place it in the agreed `Validation/` and `Tests/` structure and identify whether it is required or optional.
 
 ## Versioning and releases
 
-Use Semantic Versioning in the form:
+Use Semantic Versioning: `<majorVersion>.<minorVersion>.<patchVersion>` (for example, `1.0.0` → `1.1.0`).
 
-```text
-<majorVersion>.<minorVersion>.<patchVersion>
-```
+- **Patch**: backward-compatible corrections or clarifications without behavioral changes.
+- **Minor**: backward-compatible additions or enhancements.
+- **Major**: breaking changes, with migration notes.
 
-For example:
-
-```text
-1.0.0 → 1.1.0
-```
-
-General guidance:
-
-- Increment the **patch** version for backward-compatible corrections or clarifications that do not change the defined behavior.
-- Increment the **minor** version for backward-compatible additions or enhancements.
-- Increment the **major** version for breaking changes.
-- Provide migration notes when a release introduces breaking changes.
-
-If you create a release:
-
-- Use the repository's agreed release/tag naming convention for the version.
-- Ensure the corresponding versioned profile artifacts are present under `profiles/<profile>/<version>/`.
-- Update the relevant documentation, validation artifacts, tests, examples, and CHANGELOG/release notes.
-- Confirm that published examples pass both the official CycloneDX 1.7 validation layer and the applicable ATIS profile/taxonomy validation layer.
+For releases, use the agreed release/tag convention, ensure the versioned profile artifacts are present, update relevant documentation, validation, tests, examples, and release notes, and confirm published examples pass both validation layers.
 
 ## Code of conduct
 
